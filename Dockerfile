@@ -5,7 +5,7 @@ RUN npm install
 COPY . .
 
 FROM FirstStage AS FinalStage
-RUN npm install --production
+RUN npm run build --production
 COPY . .
 EXPOSE 3000
 CMD ["npm", "start"]
